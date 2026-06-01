@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <h1>Cookie Clicker</h1>
+    <link rel=”stylesheet” href=”styles.css”>
+</head>
+<body>
+    <body>
+
+        <div class="game-container">
+            <div class="click-area">
+                <h1>Cookie Clicker</h1>
+                <div class="score-display"><span id="cookie-count">0</span> sušenek</div>
+                <div class="cps-display">za vteřinu: <span id="cps-count">0</span></div>
+                
+                <div id="main-cookie">🍪</div>
+    
+                <div id="notification"></div>
+            </div>
+    
+            <div class="shop-area">
+                <h2>Obchod</h2>
+    
+                <button class="shop-item" id="btn-grandma" onclick="buyItem('grandma')">
+                    <div class="item-info">
+                        <div class="item-name"> Babička</div>
+                        <div class="item-cost">Cena: <span id="cost-grandma">15</span></div>
+                        <div style="font-size: 12px; color: #bbb;">+1 sušenka/s</div>
+                    </div>
+                    <div class="item-count" id="count-grandma">0</div>
+                </button>
+    
+                <button class="shop-item" id="btn-factory" onclick="buyItem('factory')">
+                    <div class="item-info">
+                        <div class="item-name"> Továrna</div>
+                        <div class="item-cost">Cena: <span id="cost-factory">100</span></div>
+                        <div style="font-size: 12px; color: #bbb;">+10 sušenek/s</div>
+                    </div>
+                    <div class="item-count" id="count-factory">0</div>
+                </button>
+    
+                <button class="shop-item golden-btn" id="btn-golden" onclick="buyGoldenCookie()">
+                    <div class="item-info">
+                        <div class="item-name"> Zlatá sušenka</div>
+                        <div class="item-cost">Cena: <span id="cost-golden">500</span></div>
+                        <div style="font-size: 12px; color: #333;">5% šance na +500% k současnému stavu</div>
+                    </div>
+                </button>
+            </div>
+        </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

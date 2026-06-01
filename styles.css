@@ -1,0 +1,135 @@
+:root {
+    --bg-color: #2c3e50;
+    --panel-bg: rgba(0, 0, 0, 0.5);
+    --text-color: #ecf0f1;
+    --accent: #f39c12;
+    --cookie-color: #d35400;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, var(--bg-color), #34495e);
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    user-select: none;
+}
+
+.game-container {
+    display: flex;
+    gap: 20px;
+    background: var(--panel-bg);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.click-area, .shop-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+}
+
+.shop-area {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+h1, h2 {
+    margin-top: 0;
+    text-align: center;
+    color: var(--accent);
+}
+
+.score-display {
+    font-size: 28px;
+    font-weight: bold;
+    margin: 15px 0;
+}
+
+.cps-display {
+    font-size: 16px;
+    color: #bdc3c7;
+    margin-bottom: 30px;
+}
+
+#main-cookie {
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, #e67e22, var(--cookie-color));
+    border: 8px dashed #a04000;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.4), inset 0 0 20px rgba(0,0,0,0.5);
+    transition: transform 0.05s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 80px;
+}
+
+#main-cookie:active {
+    transform: scale(0.92);
+}
+
+.shop-item {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background 0.2s;
+}
+
+.shop-item:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.shop-item:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.item-info {
+    text-align: left;
+}
+
+.item-name {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.item-cost {
+    color: var(--accent);
+    font-size: 14px;
+}
+
+.item-count {
+    font-size: 24px;
+    font-weight: bold;
+    color: rgba(255,255,255,0.5);
+}
+
+#notification {
+    margin-top: 20px;
+    min-height: 40px;
+    font-weight: bold;
+    text-align: center;
+    color: #f1c40f;
+}
+
+.golden-btn {
+    background: linear-gradient(45deg, #f1c40f, #f39c12) !important;
+    color: #000;
+    border: 2px solid #fff;
+}
